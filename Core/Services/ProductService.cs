@@ -15,10 +15,10 @@ namespace Core.Services
         public async Task<IEnumerable<Product>> GetAllAsync()
         {
             var products = await _unitOfWork.products.GetAllAsync();
-            if (products == null || !products.Any())
-            {
-                throw new Exception("No products found");
-            }
+            //if (products == null || !products.Any())
+            //{
+            //    throw new Exception("No products found");
+            //}
             return products;
         }
         public async Task<Product> GetByIdAsync(int id)
@@ -42,7 +42,6 @@ namespace Core.Services
                 Name = model.Name,
                 Price = model.Price,
                 
-                
             };
             await _unitOfWork.products.AddAsync(productdata);
             await _unitOfWork.SaveChangesAsync();
@@ -62,10 +61,10 @@ namespace Core.Services
         public async Task DeleteAsync(int id)
         {
             var product = await _unitOfWork.products.GetByIdAsync(id);
-            if (product == null)
-            {
-                throw new Exception($"Product with id {id} not found");
-            }
+            //if (product == null)
+            //{
+            //    throw new Exception($"Product with id {id} not found");
+            //}
             await _unitOfWork.products.DeleteAsync(id);
             //await _unitOfWork.products.DeleteAsync(product);
             await _unitOfWork.SaveChangesAsync();

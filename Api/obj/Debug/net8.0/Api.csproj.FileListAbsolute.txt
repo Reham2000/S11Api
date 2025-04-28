@@ -149,3 +149,9 @@ E:\S11RestApi\Api\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resource
 E:\S11RestApi\Api\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\S11RestApi\Api\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\S11RestApi\Api\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\S11RestApi\Api\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+E:\S11RestApi\Api\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+E:\S11RestApi\Api\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+E:\S11RestApi\Api\bin\Debug\net8.0\Core.dll
+E:\S11RestApi\Api\bin\Debug\net8.0\Core.pdb
+E:\S11RestApi\Api\obj\Debug\net8.0\Api.sourcelink.json

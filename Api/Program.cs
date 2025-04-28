@@ -1,4 +1,8 @@
+using Core.Interfaces;
+using Core.Services;
 using Infrastructure.Data;
+using Infrastructure.Implements;
+using Infrastructure.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +15,9 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("con")));
 
+
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IUintOfWork, UnitOfWork >();
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

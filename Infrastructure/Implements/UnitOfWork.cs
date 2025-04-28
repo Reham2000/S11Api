@@ -14,7 +14,7 @@ namespace Infrastructure.Implements
         public UnitOfWork(AppDbContext context)
         {
             _context = context;
-            products = new ProductRepository(_context);
+            products = new ProductRepository(context);
         }
 
         public IproductRepository products { get; private set; }

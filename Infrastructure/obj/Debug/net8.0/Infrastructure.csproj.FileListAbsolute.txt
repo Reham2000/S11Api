@@ -1,0 +1,17 @@
+E:\S11RestApi\Infrastructure\bin\Debug\net8.0\Infrastructure.deps.json
+E:\S11RestApi\Infrastructure\bin\Debug\net8.0\Infrastructure.runtimeconfig.json
+E:\S11RestApi\Infrastructure\bin\Debug\net8.0\Infrastructure.dll
+E:\S11RestApi\Infrastructure\bin\Debug\net8.0\Infrastructure.pdb
+E:\S11RestApi\Infrastructure\bin\Debug\net8.0\Domin.dll
+E:\S11RestApi\Infrastructure\bin\Debug\net8.0\Domin.pdb
+E:\S11RestApi\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.AssemblyReference.cache
+E:\S11RestApi\Infrastructure\obj\Debug\net8.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\S11RestApi\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
+E:\S11RestApi\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
+E:\S11RestApi\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
+E:\S11RestApi\Infrastructure\obj\Debug\net8.0\Infrastr.15EFFBFE.Up2Date
+E:\S11RestApi\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
+E:\S11RestApi\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
+E:\S11RestApi\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
+E:\S11RestApi\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
+E:\S11RestApi\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll

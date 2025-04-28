@@ -1,0 +1,11 @@
+E:\S11RestApi\Core\bin\Debug\net8.0\Core.deps.json
+E:\S11RestApi\Core\bin\Debug\net8.0\Core.dll
+E:\S11RestApi\Core\bin\Debug\net8.0\Core.pdb
+E:\S11RestApi\Core\obj\Debug\net8.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\S11RestApi\Core\obj\Debug\net8.0\Core.AssemblyInfoInputs.cache
+E:\S11RestApi\Core\obj\Debug\net8.0\Core.AssemblyInfo.cs
+E:\S11RestApi\Core\obj\Debug\net8.0\Core.csproj.CoreCompileInputs.cache
+E:\S11RestApi\Core\obj\Debug\net8.0\Core.dll
+E:\S11RestApi\Core\obj\Debug\net8.0\refint\Core.dll
+E:\S11RestApi\Core\obj\Debug\net8.0\Core.pdb
+E:\S11RestApi\Core\obj\Debug\net8.0\ref\Core.dll

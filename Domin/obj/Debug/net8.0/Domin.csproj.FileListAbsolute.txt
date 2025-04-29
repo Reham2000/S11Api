@@ -10,3 +10,4 @@ E:\S11RestApi\Domin\obj\Debug\net8.0\refint\Domin.dll
 E:\S11RestApi\Domin\obj\Debug\net8.0\Domin.pdb
 E:\S11RestApi\Domin\obj\Debug\net8.0\ref\Domin.dll
 E:\S11RestApi\Domin\obj\Debug\net8.0\Domin.csproj.AssemblyReference.cache
+E:\S11RestApi\Domin\obj\Debug\net8.0\Domin.sourcelink.json

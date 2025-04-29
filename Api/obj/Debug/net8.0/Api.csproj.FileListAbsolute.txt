@@ -155,3 +155,10 @@ E:\S11RestApi\Api\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
 E:\S11RestApi\Api\bin\Debug\net8.0\Core.dll
 E:\S11RestApi\Api\bin\Debug\net8.0\Core.pdb
 E:\S11RestApi\Api\obj\Debug\net8.0\Api.sourcelink.json
+E:\S11RestApi\Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\S11RestApi\Api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\S11RestApi\Api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\S11RestApi\Api\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\S11RestApi\Api\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+E:\S11RestApi\Api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+E:\S11RestApi\Api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll

@@ -1,11 +1,13 @@
 ﻿using Core.Interfaces;
 using Domin.DTOs;
 using Domin.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
 {
+    //[Authorize(Policy = "AdminPolicy")]
     [Route("api/V1.0/[controller]")] // url : localhost:5555/api/V1.0/products
     [ApiController]
     public class ProductsController : ControllerBase
@@ -22,6 +24,7 @@ namespace Api.Controllers
 
 
         [HttpGet("GetAll")]  // api/V1.0/Products/getAll
+        [Authorize(Policy ="AllPolicy")]
         public async Task<IActionResult> GetAll()
         {
             try
@@ -52,7 +55,7 @@ namespace Api.Controllers
             }
         }
 
-
+        [Authorize(Policy = "AllPolicy")]
         [HttpGet("GetById/{id}")]  // api/V1.0/Products/GetById/{id}
         public async Task<IActionResult> GetById(int id)
         {
@@ -84,7 +87,7 @@ namespace Api.Controllers
             }
         }
 
-
+        [Authorize(Policy = "AllPolicy")]
         [HttpGet("GetProduct/Id=1")]  // api/V1.0/Products/GetProduct/Id=1
         public async Task<IActionResult> GetById1()
         {
@@ -115,7 +118,7 @@ namespace Api.Controllers
                 });
             }
         }
-
+        [Authorize(Policy = "AdminManagerPolicy")]
         [HttpPost("Add")]   // api/V1.0/Products/Add
         public async Task<IActionResult> Add(ProductDTo model)
         {
@@ -160,7 +163,7 @@ namespace Api.Controllers
 
         }
 
-
+        [Authorize(Policy = "AdminManagerPolicy")]
         [HttpPut("Update")]  // api/V1.0/Products/Update
         public async Task<IActionResult> Update(ProductDTo model)
         {
@@ -201,6 +204,7 @@ namespace Api.Controllers
             }
         }
 
+        [Authorize(Policy = "AdminPolicy")]
         [HttpDelete("Delete/{id}")]  // api/V1.0/Products/Delete/{id}
         public async Task<IActionResult> Delete(int id)
         {

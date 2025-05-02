@@ -1,7 +1,10 @@
 ﻿using Core.Interfaces;
 using Domin.DTOs;
+using Infrastructure.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace Api.Controllers
 {
@@ -11,10 +14,12 @@ namespace Api.Controllers
     {
         private readonly IAuthRepository _authRepository;
         private readonly ITokenService _tokenService;
-        public AuthController(IAuthRepository authRepository, ITokenService tokenService)
+        private readonly IUintOfWork _uintOfWork;
+        public AuthController(IAuthRepository authRepository, ITokenService tokenService, IUintOfWork uintOfWork)
         {
             _authRepository = authRepository;
             _tokenService = tokenService;
+            _uintOfWork = uintOfWork;
         }
 
 
@@ -113,6 +118,46 @@ namespace Api.Controllers
                 });
             }
 
+        }
+
+        [Authorize(Policy = "AllPolicy")]
+        [HttpPost("Logout")]
+        public async Task<IActionResult> Logout()
+        {
+            try
+            {
+
+                // get jti
+                var jti = User.FindFirst(JwtRegisteredClaimNames.Jti)?.Value;
+                if (string.IsNullOrWhiteSpace(jti))
+                {
+                    return Unauthorized(new
+                    {
+                        StatusCode = StatusCodes.Status401Unauthorized,
+                        message =  "Invalid token : missing JTI"
+                    });
+                }
+                // set revoce => add jti to revocedtokens table
+                await _uintOfWork.revokedTokens.RevokeRokenAsync(jti);
+                await _uintOfWork.SaveChangesAsync();
+
+                return Ok(new
+                {
+                    StatusCode = StatusCodes.Status200OK,
+                    message = "Logged out successfully!"
+                });
+
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new
+                {
+                    StatusCode = StatusCodes.Status500InternalServerError,
+                    message = "An error occurred while logging out!",
+                    Details = ex.Message
+                });
+            }
         }
     }
 }

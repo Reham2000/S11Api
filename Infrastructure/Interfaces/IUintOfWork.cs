@@ -9,6 +9,7 @@ namespace Infrastructure.Interfaces
     public interface IUintOfWork : IDisposable
     {
        IproductRepository products { get; }
+        IRevokedTokenRepository revokedTokens { get; }
         Task<int> SaveChangesAsync();
     }
    

@@ -1,4 +1,5 @@
-﻿using Domin.Models;
+﻿using Domin.DTOs;
+using Domin.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,12 @@ namespace Core.Interfaces
 {
     public interface ITokenService
     {
-        string GenerateJwtToken(User user);    
+        string GenerateJwtToken(User user);
+
+        // RefreshToken
+
+        RefreshToken GenreateRefreshToken(string ipAddress);
+        Task<AuthenticateResponse> RefreshToken(string token, string ipAddress); 
+        Task<bool> RevoceToken(string token, string ipAddress);
     }
 }

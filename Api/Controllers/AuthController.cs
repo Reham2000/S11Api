@@ -1,4 +1,5 @@
-﻿using Core.Interfaces;
+﻿using Azure.Core;
+using Core.Interfaces;
 using Domin.DTOs;
 using Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -159,5 +160,56 @@ namespace Api.Controllers
                 });
             }
         }
+
+        [Authorize(Policy = "AllPolicy")]
+        [HttpPost("refresh-token")]
+        public async Task<IActionResult> RefreshToken(TokenRequest request)
+        {
+            var response = await _tokenService.RefreshToken(request.Token,GetIpAddress());
+            if (response == null)
+                return Unauthorized(new
+                {
+                    SatatusCode = StatusCodes.Status401Unauthorized,
+                    message = "Invalid Token Or Expired"
+                });
+            return Ok(new
+            {
+                StatusCode = StatusCodes.Status200OK,
+                message = "Refresh Token Generated Successfully!",
+                Details = response
+            });
+        }
+
+        [Authorize(Policy = "AllPolicy")]
+        [HttpPost("revoce-Token")]
+        public async Task<IActionResult> RevoceToken(TokenRequest request)
+        {
+            var result = await _tokenService.RevoceToken(request.Token, GetIpAddress());
+            if (result)
+                return Ok(new
+                {
+                    StatusCode = StatusCodes.Status200OK,
+                    message = "Token has been revoced successfully!"
+
+                });
+            return NotFound(new
+            {
+                StatusCode = StatusCodes.Status404NotFound,
+                message= "Token Not Found Or Already Revoced!"
+            });
+          }      
+
+
+
+
+
+
+        private string GetIpAddress()
+        {
+            return Request.Headers.ContainsKey("X-Forwarded-For") ?
+                Request.Headers["X-Forwarded-For"] :
+                HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
+        }
+
     }
 }

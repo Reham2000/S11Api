@@ -20,10 +20,12 @@ namespace Infrastructure.Implements
             _jwt = jwt;
             products = new ProductRepository(context);
             revokedTokens = new RevokedTokenRepository(context,_jwt);
+            refreshTokens = new RefreshTokenRepository(context);
         }
 
         public IproductRepository products { get; private set; }
         public IRevokedTokenRepository revokedTokens { get; private set; }
+        public IRefreshTokenRepository refreshTokens { get; private set; }
         public void Dispose()
         {
             _context.Dispose();

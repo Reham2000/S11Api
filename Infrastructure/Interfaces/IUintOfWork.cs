@@ -10,6 +10,7 @@ namespace Infrastructure.Interfaces
     {
        IproductRepository products { get; }
         IRevokedTokenRepository revokedTokens { get; }
+        IRefreshTokenRepository refreshTokens { get; }
         Task<int> SaveChangesAsync();
     }
    

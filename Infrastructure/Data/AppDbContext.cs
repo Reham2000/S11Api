@@ -13,7 +13,9 @@ namespace Infrastructure.Data
        public DbSet<Product> Products { get; set; }
        public DbSet<Category> Categories { get; set; }
         public DbSet<RevokedToken> RevokedTokens { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
 
-        
+
+
     }
 }

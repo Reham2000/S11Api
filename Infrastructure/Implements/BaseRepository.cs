@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,5 +22,9 @@ namespace Infrastructure.Implements
         public async Task UpdateAsync(T entity) => _context.Set<T>().Update(entity);
         public async Task DeleteAsync(int id) => _context.Set<T>().Remove(await GetByIdAsync(id));
         public async Task DeleteAsync(T entity) => _context.Set<T>().Remove(entity);
+        public async Task<T> GetByCriteriaAsync(Expression<Func<T, bool>> criteria)
+        {
+            return await _context.Set<T>().Where(criteria).FirstOrDefaultAsync();
+        }
     }
 }

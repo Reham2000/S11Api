@@ -19,9 +19,13 @@ namespace Api.Controllers
         // [HttpPatch]  update data    (part of data)  
 
 
-        private readonly IProductService _productService;
-        public ProductsController(IProductService productService) => _productService = productService;
-
+        //private readonly IProductService _services.productService;
+        //public ProductsController(IProductService productService) => _services.productService = productService;
+        private readonly IServiceUnitOfWork _services;
+        public ProductsController(IServiceUnitOfWork services)
+        {
+            _services = services;
+        }
 
         [HttpGet("GetAll")]  // api/V1.0/Products/getAll
         [Authorize(Policy ="AllPolicy")]
@@ -30,7 +34,7 @@ namespace Api.Controllers
             try
             {
 
-                var products = await _productService.GetAllAsync();
+                var products = await _services.productService.GetAllAsync();
                 if (products == null || !products.Any())
                 {
                     return NotFound(new
@@ -61,7 +65,7 @@ namespace Api.Controllers
         {
             try
             {
-                var product = await _productService.GetByIdAsync(id);
+                var product = await _services.productService.GetByIdAsync(id);
                 if (product == null)
                 {
                     return NotFound(new
@@ -93,7 +97,7 @@ namespace Api.Controllers
         {
             try
             {
-                var product = await _productService.GetByIdAsync(1);
+                var product = await _services.productService.GetByIdAsync(1);
                 if (product == null)
                 {
                     return NotFound(new
@@ -141,7 +145,7 @@ namespace Api.Controllers
                         Message = "products can't be null",
                     });
                 }
-                await _productService.AddAsync(model);
+                await _services.productService.AddAsync(model);
                 return Ok(new
                 {
                     StatusCode = StatusCodes.Status200OK,
@@ -179,7 +183,7 @@ namespace Api.Controllers
                     });
                 }
 
-                await _productService.UpdateAsync(new Product
+                await _services.productService.UpdateAsync(new Product
                 {
                     Id = model.Id,
                     Name = model.Name,
@@ -210,7 +214,7 @@ namespace Api.Controllers
         {
             try
             {
-                var product = await _productService.GetByIdAsync(id);
+                var product = await _services.productService.GetByIdAsync(id);
                 if (product == null)
                 {
                     return NotFound(new
@@ -219,7 +223,7 @@ namespace Api.Controllers
                         Message = "Product not found",
                     });
                 }
-                await _productService.DeleteAsync(id);
+                await _services.productService.DeleteAsync(id);
 
                 return Ok(new
                 {

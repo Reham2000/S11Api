@@ -3,72 +3,24 @@
   "WorkspaceRootPath": "E:\\S11RestApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58F03930-4BEC-4B0B-B7F7-94F33877B99F}|Core\\Core.csproj|e:\\s11restapi\\core\\services\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F03930-4BEC-4B0B-B7F7-94F33877B99F}|Core\\Core.csproj|solutionrelative:core\\services\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C70FAB23-C252-40E3-A598-0F136F37B7B5}|Api\\Api.csproj|e:\\s11restapi\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C70FAB23-C252-40E3-A598-0F136F37B7B5}|Api\\Api.csproj|solutionrelative:api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA5DE2FB-5DBB-42D8-9C91-8F9B600BC705}|Domin\\Domin.csproj|e:\\s11restapi\\domin\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA5DE2FB-5DBB-42D8-9C91-8F9B600BC705}|Domin\\Domin.csproj|solutionrelative:domin\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C70FAB23-C252-40E3-A598-0F136F37B7B5}|Api\\Api.csproj|e:\\s11restapi\\api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C70FAB23-C252-40E3-A598-0F136F37B7B5}|Api\\Api.csproj|solutionrelative:api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C70FAB23-C252-40E3-A598-0F136F37B7B5}|Api\\Api.csproj|e:\\s11restapi\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C70FAB23-C252-40E3-A598-0F136F37B7B5}|Api\\Api.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C70FAB23-C252-40E3-A598-0F136F37B7B5}|Api\\Api.csproj|e:\\s11restapi\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C70FAB23-C252-40E3-A598-0F136F37B7B5}|Api\\Api.csproj|solutionrelative:api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58F03930-4BEC-4B0B-B7F7-94F33877B99F}|Core\\Core.csproj|e:\\s11restapi\\core\\services\\serviceunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F03930-4BEC-4B0B-B7F7-94F33877B99F}|Core\\Core.csproj|solutionrelative:core\\services\\serviceunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58F03930-4BEC-4B0B-B7F7-94F33877B99F}|Core\\Core.csproj|e:\\s11restapi\\core\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F03930-4BEC-4B0B-B7F7-94F33877B99F}|Core\\Core.csproj|solutionrelative:core\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA5DE2FB-5DBB-42D8-9C91-8F9B600BC705}|Domin\\Domin.csproj|e:\\s11restapi\\domin\\dtos\\tokenrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA5DE2FB-5DBB-42D8-9C91-8F9B600BC705}|Domin\\Domin.csproj|solutionrelative:domin\\dtos\\tokenrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA5DE2FB-5DBB-42D8-9C91-8F9B600BC705}|Domin\\Domin.csproj|e:\\s11restapi\\domin\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA5DE2FB-5DBB-42D8-9C91-8F9B600BC705}|Domin\\Domin.csproj|solutionrelative:domin\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F833F9EF-F801-4124-96D1-F2CAA62351FB}|Infrastructure\\Infrastructure.csproj|e:\\s11restapi\\infrastructure\\interfaces\\irefreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F833F9EF-F801-4124-96D1-F2CAA62351FB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\interfaces\\irefreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F833F9EF-F801-4124-96D1-F2CAA62351FB}|Infrastructure\\Infrastructure.csproj|e:\\s11restapi\\infrastructure\\implements\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F833F9EF-F801-4124-96D1-F2CAA62351FB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\implements\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F833F9EF-F801-4124-96D1-F2CAA62351FB}|Infrastructure\\Infrastructure.csproj|e:\\s11restapi\\infrastructure\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F833F9EF-F801-4124-96D1-F2CAA62351FB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F833F9EF-F801-4124-96D1-F2CAA62351FB}|Infrastructure\\Infrastructure.csproj|e:\\s11restapi\\infrastructure\\interfaces\\iuintofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F833F9EF-F801-4124-96D1-F2CAA62351FB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\interfaces\\iuintofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F03930-4BEC-4B0B-B7F7-94F33877B99F}|Core\\Core.csproj|e:\\s11restapi\\core\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F03930-4BEC-4B0B-B7F7-94F33877B99F}|Core\\Core.csproj|solutionrelative:core\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA5DE2FB-5DBB-42D8-9C91-8F9B600BC705}|Domin\\Domin.csproj|e:\\s11restapi\\domin\\dtos\\authenticateresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA5DE2FB-5DBB-42D8-9C91-8F9B600BC705}|Domin\\Domin.csproj|solutionrelative:domin\\dtos\\authenticateresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F833F9EF-F801-4124-96D1-F2CAA62351FB}|Infrastructure\\Infrastructure.csproj|e:\\s11restapi\\infrastructure\\implements\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F833F9EF-F801-4124-96D1-F2CAA62351FB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\implements\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F833F9EF-F801-4124-96D1-F2CAA62351FB}|Infrastructure\\Infrastructure.csproj|e:\\s11restapi\\infrastructure\\implements\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F833F9EF-F801-4124-96D1-F2CAA62351FB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\implements\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F833F9EF-F801-4124-96D1-F2CAA62351FB}|Infrastructure\\Infrastructure.csproj|e:\\s11restapi\\infrastructure\\migrations\\20250503074821_setrefreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F833F9EF-F801-4124-96D1-F2CAA62351FB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20250503074821_setrefreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F833F9EF-F801-4124-96D1-F2CAA62351FB}|Infrastructure\\Infrastructure.csproj|e:\\s11restapi\\infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F833F9EF-F801-4124-96D1-F2CAA62351FB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58F03930-4BEC-4B0B-B7F7-94F33877B99F}|Core\\Core.csproj|e:\\s11restapi\\core\\interfaces\\iserviceunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F03930-4BEC-4B0B-B7F7-94F33877B99F}|Core\\Core.csproj|solutionrelative:core\\interfaces\\iserviceunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,227 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\S11RestApi\\Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\S11RestApi\\Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOoAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T18:54:53.356Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\S11RestApi\\Api\\Program.cs",
               "RelativeDocumentMoniker": "Api\\Program.cs",
-              "ToolTip": "E:\\S11RestApi\\Api\\Program.cs*",
-              "RelativeToolTip": "Api\\Program.cs*",
-              "ViewState": "AgIAAGkAAACAZmZmZmYkwHkAAAAnAAAAAAAAAA==",
+              "ToolTip": "E:\\S11RestApi\\Api\\Program.cs",
+              "RelativeToolTip": "Api\\Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACYAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T09:52:27.466Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthRepository.cs",
-              "DocumentMoniker": "E:\\S11RestApi\\Core\\Services\\AuthRepository.cs",
-              "RelativeDocumentMoniker": "Core\\Services\\AuthRepository.cs",
-              "ToolTip": "E:\\S11RestApi\\Core\\Services\\AuthRepository.cs*",
-              "RelativeToolTip": "Core\\Services\\AuthRepository.cs*",
-              "ViewState": "AgIAAA0AAAAAZmZmZmYawB4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T09:48:32.19Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TokenRequest.cs",
-              "DocumentMoniker": "E:\\S11RestApi\\Domin\\DTOs\\TokenRequest.cs",
-              "RelativeDocumentMoniker": "Domin\\DTOs\\TokenRequest.cs",
-              "ToolTip": "E:\\S11RestApi\\Domin\\DTOs\\TokenRequest.cs*",
-              "RelativeToolTip": "Domin\\DTOs\\TokenRequest.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T09:21:22.929Z",
+              "WhenOpened": "2025-05-05T18:53:08.525Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "E:\\S11RestApi\\Api\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Api\\Controllers\\AuthController.cs",
-              "ToolTip": "E:\\S11RestApi\\Api\\Controllers\\AuthController.cs*",
-              "RelativeToolTip": "Api\\Controllers\\AuthController.cs*",
-              "ViewState": "AgIAAEYAAAAAzczMzMwuwLYAAAApAAAAAAAAAA==",
+              "Title": "ServiceUnitOfWork.cs",
+              "DocumentMoniker": "E:\\S11RestApi\\Core\\Services\\ServiceUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Core\\Services\\ServiceUnitOfWork.cs",
+              "ToolTip": "E:\\S11RestApi\\Core\\Services\\ServiceUnitOfWork.cs",
+              "RelativeToolTip": "Core\\Services\\ServiceUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T09:17:11.371Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "User.cs",
-              "DocumentMoniker": "E:\\S11RestApi\\Domin\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Domin\\Models\\User.cs",
-              "ToolTip": "E:\\S11RestApi\\Domin\\Models\\User.cs*",
-              "RelativeToolTip": "Domin\\Models\\User.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T09:05:06.177Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BaseRepository.cs",
-              "DocumentMoniker": "E:\\S11RestApi\\Infrastructure\\Implements\\BaseRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Implements\\BaseRepository.cs",
-              "ToolTip": "E:\\S11RestApi\\Infrastructure\\Implements\\BaseRepository.cs*",
-              "RelativeToolTip": "Infrastructure\\Implements\\BaseRepository.cs*",
-              "ViewState": "AgIAABEAAAAAAAAAAAAgwBgAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T08:52:27.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RefreshToken.cs",
-              "DocumentMoniker": "E:\\S11RestApi\\Domin\\Models\\RefreshToken.cs",
-              "RelativeDocumentMoniker": "Domin\\Models\\RefreshToken.cs",
-              "ToolTip": "E:\\S11RestApi\\Domin\\Models\\RefreshToken.cs*",
-              "RelativeToolTip": "Domin\\Models\\RefreshToken.cs*",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBkAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T07:30:27.942Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IBaseRepository.cs",
-              "DocumentMoniker": "E:\\S11RestApi\\Infrastructure\\Interfaces\\IBaseRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IBaseRepository.cs",
-              "ToolTip": "E:\\S11RestApi\\Infrastructure\\Interfaces\\IBaseRepository.cs*",
-              "RelativeToolTip": "Infrastructure\\Interfaces\\IBaseRepository.cs*",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAwAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T08:49:41.987Z",
+              "WhenOpened": "2025-05-05T18:50:52.131Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "E:\\S11RestApi\\Core\\Services\\TokenService.cs",
-              "RelativeDocumentMoniker": "Core\\Services\\TokenService.cs",
-              "ToolTip": "E:\\S11RestApi\\Core\\Services\\TokenService.cs*",
-              "RelativeToolTip": "Core\\Services\\TokenService.cs*",
-              "ViewState": "AgIAADgAAAAAMzMzMzMXwD8AAAA+AAAAAAAAAA==",
+              "Title": "IServiceUnitOfWork.cs",
+              "DocumentMoniker": "E:\\S11RestApi\\Core\\Interfaces\\IServiceUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Core\\Interfaces\\IServiceUnitOfWork.cs",
+              "ToolTip": "E:\\S11RestApi\\Core\\Interfaces\\IServiceUnitOfWork.cs",
+              "RelativeToolTip": "Core\\Interfaces\\IServiceUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T08:23:14.022Z",
+              "WhenOpened": "2025-05-05T18:49:28.646Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ITokenService.cs",
-              "DocumentMoniker": "E:\\S11RestApi\\Core\\Interfaces\\ITokenService.cs",
-              "RelativeDocumentMoniker": "Core\\Interfaces\\ITokenService.cs",
-              "ToolTip": "E:\\S11RestApi\\Core\\Interfaces\\ITokenService.cs*",
-              "RelativeToolTip": "Core\\Interfaces\\ITokenService.cs*",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "E:\\S11RestApi\\Api\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\ProductsController.cs",
+              "ToolTip": "E:\\S11RestApi\\Api\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Api\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAABsAAAAAMzMzMzMbwEMAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T08:13:15.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IUintOfWork.cs",
-              "DocumentMoniker": "E:\\S11RestApi\\Infrastructure\\Interfaces\\IUintOfWork.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IUintOfWork.cs",
-              "ToolTip": "E:\\S11RestApi\\Infrastructure\\Interfaces\\IUintOfWork.cs*",
-              "RelativeToolTip": "Infrastructure\\Interfaces\\IUintOfWork.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T08:11:13.94Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IRefreshTokenRepository.cs",
-              "DocumentMoniker": "E:\\S11RestApi\\Infrastructure\\Interfaces\\IRefreshTokenRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IRefreshTokenRepository.cs",
-              "ToolTip": "E:\\S11RestApi\\Infrastructure\\Interfaces\\IRefreshTokenRepository.cs*",
-              "RelativeToolTip": "Infrastructure\\Interfaces\\IRefreshTokenRepository.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T07:51:11.626Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AuthenticateResponse.cs",
-              "DocumentMoniker": "E:\\S11RestApi\\Domin\\DTOs\\AuthenticateResponse.cs",
-              "RelativeDocumentMoniker": "Domin\\DTOs\\AuthenticateResponse.cs",
-              "ToolTip": "E:\\S11RestApi\\Domin\\DTOs\\AuthenticateResponse.cs*",
-              "RelativeToolTip": "Domin\\DTOs\\AuthenticateResponse.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T08:17:58.322Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "E:\\S11RestApi\\Infrastructure\\Implements\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Implements\\UnitOfWork.cs",
-              "ToolTip": "E:\\S11RestApi\\Infrastructure\\Implements\\UnitOfWork.cs*",
-              "RelativeToolTip": "Infrastructure\\Implements\\UnitOfWork.cs*",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBsAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T08:08:11.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "20250503074821_setRefreshToken.cs",
-              "DocumentMoniker": "E:\\S11RestApi\\Infrastructure\\Migrations\\20250503074821_setRefreshToken.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20250503074821_setRefreshToken.cs",
-              "ToolTip": "E:\\S11RestApi\\Infrastructure\\Migrations\\20250503074821_setRefreshToken.cs",
-              "RelativeToolTip": "Infrastructure\\Migrations\\20250503074821_setRefreshToken.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBoAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T08:02:09.599Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "RefreshTokenRepository.cs",
-              "DocumentMoniker": "E:\\S11RestApi\\Infrastructure\\Implements\\RefreshTokenRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Implements\\RefreshTokenRepository.cs",
-              "ToolTip": "E:\\S11RestApi\\Infrastructure\\Implements\\RefreshTokenRepository.cs*",
-              "RelativeToolTip": "Infrastructure\\Implements\\RefreshTokenRepository.cs*",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABUAAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T07:53:35.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "E:\\S11RestApi\\Infrastructure\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Data\\AppDbContext.cs",
-              "ToolTip": "E:\\S11RestApi\\Infrastructure\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T07:46:47.446Z",
+              "WhenOpened": "2025-05-05T18:45:40.275Z",
               "EditorCaption": ""
             }
           ]

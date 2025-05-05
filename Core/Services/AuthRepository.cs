@@ -15,67 +15,153 @@ namespace Core.Services
 {
     public class AuthRepository : IAuthRepository
     {
-        private readonly UserManager<User> _userManager;
-        private readonly SignInManager<User> _signInManager;
-        private readonly IHttpContextAccessor _contextAccessor;
-        private readonly Jwt _jwt;
-        private readonly IUintOfWork _unitOfWork;
-        public AuthRepository(UserManager<User> userManager,SignInManager<User> signInManager,
-            IHttpContextAccessor contextAccessor,IOptions<Jwt> jwt, IUintOfWork uintOfWork)
+        //private readonly IUintOfWork _unitOfWork;
+        //private readonly UserManager<User> _uintOfWork.userManager;
+        //private readonly SignInManager<User> _signInManager;
+        //private readonly IHttpContextAccessor _contextAccessor;
+        //private readonly Jwt _jwt;
+        //private readonly RoleManager<IdentityRole> _roleManager;
+        //public AuthRepository(UserManager<User> userManager,SignInManager<User> signInManager,
+        //    IHttpContextAccessor contextAccessor,IOptions<Jwt> jwt, IUintOfWork uintOfWork,
+        //    RoleManager<IdentityRole> roleManager)
+        //{
+        //    _signInManager = signInManager;
+        //    _uintOfWork.userManager = userManager;
+        //    _contextAccessor = contextAccessor;
+        //    _jwt = jwt.Value;
+        //    _unitOfWork = uintOfWork;
+        //    _roleManager = roleManager;
+        //}
+        // new 
+        private readonly IUintOfWork _uintOfWork;
+        public AuthRepository(IUintOfWork uintOfWork)
         {
-            _signInManager = signInManager;
-            _userManager = userManager;
-            _contextAccessor = contextAccessor;
-            _jwt = jwt.Value;
-            _unitOfWork = uintOfWork;
+            _uintOfWork = uintOfWork;
         }
 
 
-
-        public async Task<User> RegisterAsync(RegisterDto model)
+        public async Task<ReturnModel<object>> RegisterAsync(RegisterDto model)
         {
             if(await UserExists(model.UserName))
-                return null;
+                return new ReturnModel<object>
+                {
+                    IsSuccess = false,
+                    Errors = new List<string> {"UserName Is Already Exist!" }
+                };
             var user = new User
             {
                 UserName = model.UserName,
                 Email = model.Email,
 
             };
-            var result = await _userManager.CreateAsync(user, model.Password);
+            var result = await _uintOfWork.userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
-                return user;
+                await _uintOfWork.userManager.AddToRoleAsync(user, "User");
+                return new ReturnModel<object>
+                {
+                    IsSuccess = true,
+                    Data = new
+                    {
+                        UserName = user.UserName,
+                        Email = user.Email,
+                        Role = "User"
+                    }
+                };
             }
-            return null;
+            return new ReturnModel<object>
+            {
+                IsSuccess = false,
+                Errors = result.Errors.Select(r => r.Description).ToList()
+            };
 
 
         }
-        public async Task<User> LoginAsync(LoginDto model)
+        public async Task<ReturnModel<object>> AddAsync(UserDto model)
+        {
+            if (await UserExists(model.UserName))
+                return new ReturnModel<object>
+                {
+                    IsSuccess = false,
+                    Errors = new List<string> { "UserName Is Already Exist!" }
+                };
+            var user = new User
+            {
+                UserName = model.UserName,
+                Email = model.Email,
+
+            };
+            var result = await _uintOfWork.userManager.CreateAsync(user, model.Password);
+            if (result.Succeeded)
+            {
+                var role = await _uintOfWork.roleManager.FindByIdAsync(model.RoleId);
+                if (role is null)
+                    return new ReturnModel<object>
+                    {
+                        IsSuccess = false,
+                        Errors = new List<string> { "Wrong RoleId!" }
+                    };
+                await _uintOfWork.userManager.AddToRoleAsync(user, role.Name);
+                return new ReturnModel<object>
+                {
+                    IsSuccess = true,
+                    Data = new
+                    {
+                        UserName = user.UserName,
+                        Email = user.Email,
+                        Role = role.Name
+                    }
+                };
+            }
+            return new ReturnModel<object>
+            {
+                IsSuccess = false,
+                Errors = result.Errors.Select(r => r.Description).ToList()
+            };
+
+
+        }
+        public async Task<ReturnModel<User>> LoginAsync(LoginDto model)
         {
             try
             {
-                var user = await _userManager.FindByNameAsync(model.UserName);
-                if(user is not null && await _userManager.CheckPasswordAsync(user, model.Password))
+                var user = await _uintOfWork.userManager.FindByNameAsync(model.UserName);
+                if(user is not null && await _uintOfWork.userManager.CheckPasswordAsync(user, model.Password))
                 {
-                    var result = await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
+                    var result = await _uintOfWork.signInManager.PasswordSignInAsync(user, model.Password, false, false);
                     if (result.Succeeded)
                     {
-                        return user;
+                        return new ReturnModel<User>
+                        {
+                            IsSuccess = true,
+                            Data = user
+                        };
                     }
-                    return null;
+                    return new ReturnModel<User>
+                    {
+                        IsSuccess = false,
+                        Errors = new List<string> { "Invaild UserName Or Password!"}
+                    };
                 }
-                return null;
+                return new ReturnModel<User>
+                {
+                    IsSuccess = false,
+                    Errors = new List<string> { "Invaild UserName Or Password!" }
+                };
             }
             catch (Exception ex)
             {
-                return null;
+                return new ReturnModel<User>
+                {
+                    IsSuccess = false,
+                    Errors = new List<string> { ex.Message }
+                };
             }
         }
 
         public async Task<bool> UserExists(string userName)
         {
-            var user = await _userManager.FindByNameAsync(userName);
+            var user = await _uintOfWork.userManager.FindByNameAsync(userName);
             if (user != null)
                 return true;
             return false;
@@ -83,20 +169,20 @@ namespace Core.Services
         public async Task StoreTokenAsync(User user, string token)
         {
             // identity token
-            await _userManager.SetAuthenticationTokenAsync(user,"JWT","Access_Token",token);
+            await _uintOfWork.userManager.SetAuthenticationTokenAsync(user,"JWT","Access_Token",token);
             // refresh token
-            string userIpAddress = _contextAccessor.HttpContext?.Connection?.RemoteIpAddress?.ToString();
+            string userIpAddress = _uintOfWork.contextAccessor.HttpContext?.Connection?.RemoteIpAddress?.ToString();
             var refreshToken = new RefreshToken
             {
                 Token = token,
-                Expires = DateTime.Now.AddMinutes(_jwt.ExpiryDurationInMinutes),
+                Expires = DateTime.Now.AddMinutes(_uintOfWork.jwt.ExpiryDurationInMinutes),
                 Created = DateTime.Now,
                 CreatedByIp = userIpAddress,
                 UserId = user.Id,
                 //RevocedByIp = string.Empty,
             };
-            await _unitOfWork.refreshTokens.AddAsync(refreshToken);
-            await _unitOfWork.SaveChangesAsync();
+            await _uintOfWork.refreshTokens.AddAsync(refreshToken);
+            await _uintOfWork.SaveChangesAsync();
 
 
         }

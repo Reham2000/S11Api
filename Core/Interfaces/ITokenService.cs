@@ -10,11 +10,11 @@ namespace Core.Interfaces
 {
     public interface ITokenService
     {
-        string GenerateJwtToken(User user);
+        Task<string> GenerateJwtToken(User user);
 
         // RefreshToken
 
-        RefreshToken GenreateRefreshToken(string ipAddress);
+        RefreshToken GenreateRefreshToken(string ipAddress,string jwtToken = null);
         Task<AuthenticateResponse> RefreshToken(string token, string ipAddress); 
         Task<bool> RevoceToken(string token, string ipAddress);
     }

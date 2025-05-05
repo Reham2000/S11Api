@@ -1,6 +1,9 @@
 ﻿using Domin.DTOs;
+using Domin.Models;
 using Infrastructure.Data;
 using Infrastructure.Interfaces;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
@@ -13,15 +16,36 @@ namespace Infrastructure.Implements
     public class UnitOfWork : IUintOfWork
     {
         private readonly AppDbContext _context;
-        private readonly IOptions<Jwt> _jwt;
-        public UnitOfWork(AppDbContext context ,IOptions<Jwt> jwt)
+        private readonly Jwt _jwt;
+
+
+        // new 
+        private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IHttpContextAccessor _contextAccessor;
+
+        public UnitOfWork(AppDbContext context ,IOptions<Jwt> jwt,
+            UserManager<User> userManager,SignInManager<User> signInManager,
+            RoleManager<IdentityRole> roleManager,IHttpContextAccessor contextAccessor)
         {
             _context = context;
-            _jwt = jwt;
+            _jwt = jwt.Value;
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _roleManager = roleManager;
+            _contextAccessor = contextAccessor;
             products = new ProductRepository(context);
-            revokedTokens = new RevokedTokenRepository(context,_jwt);
+            revokedTokens = new RevokedTokenRepository(context,jwt);
             refreshTokens = new RefreshTokenRepository(context);
         }
+
+        public UserManager<User> userManager => _userManager;
+        public SignInManager<User> signInManager => _signInManager;
+        public RoleManager<IdentityRole> roleManager => _roleManager;
+        public IHttpContextAccessor contextAccessor => _contextAccessor;
+        public Jwt jwt => _jwt;
+
 
         public IproductRepository products { get; private set; }
         public IRevokedTokenRepository revokedTokens { get; private set; }

@@ -9,21 +9,22 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Core.Services
 {
     public class TokenService : ITokenService
     {
-        private readonly Jwt _jwt;
+        //private readonly Jwt _uintOfWork.jwt;
         private readonly IUintOfWork _uintOfWork;
-        private readonly UserManager<User> _userManager;
-        public TokenService(IOptions<Jwt> jwt,IUintOfWork uintOfWork,UserManager<User> userManager)
+        //private readonly UserManager<User> _uintOfWork.userManager;
+        public TokenService(/*IOptions<Jwt> jwt,*/IUintOfWork uintOfWork/*,UserManager<User> userManager*/)
         {
-            _jwt = jwt.Value;
+            //_uintOfWork.jwt = jwt.Value;
             _uintOfWork = uintOfWork;
-            _userManager = userManager;
+            //_uintOfWork.userManager = userManager;
         }
-        public string GenerateJwtToken(User user)
+        public async Task<string> GenerateJwtToken(User user)
         {
             var claims = new List<Claim>
             {
@@ -32,12 +33,16 @@ namespace Core.Services
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.Email),
             };
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwt.Secretkey));
+            var userRoles = await _uintOfWork.userManager.GetRolesAsync(user);
+            foreach (var role in userRoles) {
+                claims.Add(new Claim(ClaimTypes.Role,role));
+            }
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_uintOfWork.jwt.Secretkey));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
-            var expires = DateTime.Now.AddMinutes(_jwt.ExpiryDurationInMinutes);
+            var expires = DateTime.Now.AddMinutes(_uintOfWork.jwt.ExpiryDurationInMinutes);
             var token = new JwtSecurityToken(
-                issuer: _jwt.Issuer,
-                audience: _jwt.Audience,
+                issuer: _uintOfWork.jwt.Issuer,
+                audience: _uintOfWork.jwt.Audience,
                 claims: claims,
                 expires: expires,
                 signingCredentials: creds
@@ -46,12 +51,14 @@ namespace Core.Services
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        public RefreshToken GenreateRefreshToken(string ipAddress)
+        public RefreshToken GenreateRefreshToken(string ipAddress,string jwtToken = null)
         {
             return new RefreshToken
             {
-                Token = Convert.ToBase64String(RandomNumberGenerator.GetBytes(64)),
-                Expires = DateTime.Now.AddMinutes(_jwt.ExpiryDurationInMinutes),
+                Token = jwtToken == null ?
+                Convert.ToBase64String(RandomNumberGenerator.GetBytes(64)) 
+                : jwtToken,
+                Expires = DateTime.Now.AddMinutes(_uintOfWork.jwt.ExpiryDurationInMinutes),
                 Created = DateTime.Now,
                 CreatedByIp = ipAddress,
                 
@@ -63,9 +70,10 @@ namespace Core.Services
             var refreshToken = await _uintOfWork.refreshTokens.GetByCriteriaAsync(r => r.Token == token);
             if (refreshToken == null || !refreshToken.IsActive)
                 return null;
-            var user = await _userManager.FindByIdAsync(refreshToken.UserId);
+            var user = await _uintOfWork.userManager.FindByIdAsync(refreshToken.UserId);
+            var jwtToken = await GenerateJwtToken(user);
             // genertate new token = > refresh token
-            var newRefreshToken = GenreateRefreshToken(ipAddress);
+            var newRefreshToken = GenreateRefreshToken(ipAddress,jwtToken);
             // block old token
             // revoce it
             refreshToken.Revoced = DateTime.Now;
@@ -75,7 +83,6 @@ namespace Core.Services
             user.RefreshTokens.Add(newRefreshToken); // add
             await _uintOfWork.SaveChangesAsync();  // save
 
-            var jwtToken = GenerateJwtToken(user);
             return new AuthenticateResponse(jwtToken,newRefreshToken.Token);
 
         }
